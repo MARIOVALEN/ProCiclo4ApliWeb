@@ -32,6 +32,7 @@ export class UsuarioService {
       correo: usuario.correo
     });
   }
+
   //Método para Listar todos los Usuarios Agredado Ver receta Semana 6:
   getAll(): Observable<UsuarioModelo[]>{
         return this.http.get<UsuarioModelo[]>(`${this.url}/usuarios`, {
@@ -40,6 +41,7 @@ export class UsuarioService {
           })
         })
       }
+
  //Método para Actualizar un Usuario Agredado Ver receta Semana 6:
   update(usuario: UsuarioModelo): Observable<UsuarioModelo> {
         return this.http.patch<UsuarioModelo>(`${this.url}/usuarios/${usuario.id}`, {
@@ -53,6 +55,7 @@ export class UsuarioService {
           })
         });
       }
+
   //Método para Eliminar un Usuario Agredado Ver receta Semana 6: 
   delete(id: string): Observable<UsuarioModelo[]>{
         return this.http.delete<UsuarioModelo[]>(`${this.url}/usuarios/${id}`, {
@@ -61,6 +64,7 @@ export class UsuarioService {
           })
         })
       }
+      
   //Metodo para Consultar un unico Usuario Agredado Ver receta Semana 6: 
   getWithId(id: string): Observable<UsuarioModelo>{
         return this.http.get<UsuarioModelo>(`${this.url}/usuarios/${id}`,{

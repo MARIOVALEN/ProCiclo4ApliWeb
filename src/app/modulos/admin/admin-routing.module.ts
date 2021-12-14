@@ -4,17 +4,22 @@ import { CreateComponent } from './usuarios/create/create.component';
 import { EditComponent } from './usuarios/edit/edit.component';
 import { GetComponent } from './usuarios/get/get.component';
 
+//Agregado ver receta semana 7
+import { SessionGuard } from 'src/app/guards/session.guard';
+
 const routes: Routes = [
 
   {
     path: 'create',
     component: CreateComponent,
   },{
-    path: 'edit',
+    path: 'edit/:id', //Agregado el ID ver recera apartado Editar Usuario
     component: EditComponent,
+    canActivate: [SessionGuard]
   },{
-    path: 'get',
+        path: 'get',
     component: GetComponent,
+    canActivate: [SessionGuard]
   },
 
 

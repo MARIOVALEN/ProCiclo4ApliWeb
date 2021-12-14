@@ -50,7 +50,7 @@ identificarUsuario() {
         imageHeight: 200,
         imageAlt: 'Custom image',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1900
       }).then(() =>{
         this.seguridadService.almacenarSesion(data)
         this.router.navigate(['/index']);
